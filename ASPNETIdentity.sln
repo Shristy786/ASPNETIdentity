@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34009.444
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPNETIdentity", "ASPNETIdentity.csproj", "{39886EA9-C8F3-4593-9B1C-05C7BCC6B2D4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomUserManagement", "..\CustomUserManagement\CustomUserManagement.csproj", "{11464635-C657-4784-869C-F567E3C4031B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{39886EA9-C8F3-4593-9B1C-05C7BCC6B2D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39886EA9-C8F3-4593-9B1C-05C7BCC6B2D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39886EA9-C8F3-4593-9B1C-05C7BCC6B2D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11464635-C657-4784-869C-F567E3C4031B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11464635-C657-4784-869C-F567E3C4031B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11464635-C657-4784-869C-F567E3C4031B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11464635-C657-4784-869C-F567E3C4031B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
