@@ -1,5 +1,6 @@
 using ASPNETIdentity.Data;
 using ASPNETIdentity.Models;
+using ASPNETIdentity.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -20,6 +21,7 @@ builder.Services.AddIdentity<ApplicationUser,IdentityRole>()
     .AddTokenProvider<DataProtectorTokenProvider<ApplicationUser>>(TokenOptions.DefaultProvider)
     .AddDefaultUI();
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IFileService, FileService>();
 
 var app = builder.Build();
 
@@ -46,5 +48,10 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 app.MapRazorPages();
+
+using (var scope = app.Services.CreateScope())
+{
+    await DbSeeder.SeddRolesAndAdminAsync(scope.ServiceProvider);
+}
 
 app.Run();
